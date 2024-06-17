@@ -1,0 +1,106 @@
+// 1300px以上
+@mixin pc-over {
+	@media screen and (min-width: ($pc-over-vw) * 1px) {
+		@content;
+	}
+}
+
+// 768px以上
+@mixin pc {
+	@media screen and (min-width: ($spvw) * 1px) {
+		@content;
+	}
+}
+
+// 768px - 1920px
+@mixin pc-mid {
+	@media screen and (max-width: ($pcvw) * 1px) and (min-width: ($spvw) * 1px) {
+		@content;
+	}
+}
+
+// 767px以下
+@mixin sp {
+	@media screen and (max-width: ($spvw) * 1px - 1) {
+		@content;
+	}
+}
+
+// 要素のサイズ固定の時 768px以上
+@function px($arg) {
+	$value: $arg;
+	@return $value * 1px;
+}
+
+// 要素のサイズ可変の時 769px - 1920px
+@function px-var($arg) {
+	@return $arg / $pcvw * 100vw;
+}
+
+// 要素のサイズ可変 767px以下
+@function vw($arg) {
+	$value: 0;
+	$value: $arg / $sp-artboard * 100;
+	@return $value * 1vw;
+}
+
+// font 768px以上
+@mixin font-pc($size: 10, $height: 10, $spcing: 0, $weight: 900) {
+	// font 768px以上
+	@include pc {
+		font-size: ($size * 1px);
+		line-height: ($height / $size);
+		letter-spacing: ($spcing / 1000 * 1em);
+		font-weight: $weight;
+	}
+	// font 768px-1920ppx
+	@include pc-mid {
+		font-size: ($size / $pcvw * 100vw);
+	}
+}
+
+// font 767px以下
+@mixin font-sp($size: 10, $height: 10, $spcing: 0, $weight: 300) {
+	@include sp {
+		font-size: calc((#{$size} / #{$sp-artboard}) * 100vw);
+		line-height: ($height / $size);
+		letter-spacing: ($spcing / 1000 * 1em);
+		font-weight: $weight;
+	}
+}
+
+// layout
+@mixin pc-base-layout {
+	@include pc {
+		min-width: ($pcvw) + px;
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+// 下層ページの要素のサイズ固定の時 768px以上
+@function px-sub($arg) {
+	$value: $arg / $pc-sub-artboard * $pcvw;
+	@return $value * 1px;
+}
+
+// 下層ページの要素のサイズ可変の時 769px - 1600px
+@function px-sub-var($arg) {
+	@return $arg / 1300 * 100vw;
+}
+
+// 下層ページのfont 768px以上
+@mixin font-sub-pc($size: 10, $height: 10, $spcing: 0, $weight: 900) {
+	// font 768px以上
+	@include pc {
+		font-size: ($size / $pc-sub-artboard * $pcvw * 1px);
+		line-height: ($height / $size);
+		letter-spacing: ($spcing / 1000 * 1em);
+		font-weight: $weight;
+	}
+	// font 768px-1600px
+	@include pc-mid {
+		font-size: ($size / $pc-sub-artboard * 100vw);
+	}
+}

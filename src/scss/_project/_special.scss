@@ -1,0 +1,96 @@
+.p-special {
+  @include sp {
+    margin-bottom: vw(40);
+  }
+}
+
+.p-special__bg {
+  background-repeat: no-repeat;
+  background-position: top center;
+  @include pc {
+    background-image: url(../../img/bg/bg-04.png);
+    background-size: 100% px(466);
+    padding-top: px(121);
+  }
+  @include pc-mid {
+    background-size: 100% px-var(466);
+    padding-top: px-var(121);
+  }
+  @include sp {
+    background-image: url(../../img/bg/bg-04sp.png);
+    padding-top: vw(75);
+    background-size: 100% vw(336);
+  }
+}
+
+.p-special__inner {
+  .u-ttl {
+    @include pc {
+      margin-bottom: px(45);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(45);
+    }
+    @include sp {
+      margin-bottom: vw(39);
+    }
+  }
+}
+
+.p-special__inner__flex {
+  display: flex;
+  @include pc {
+    justify-content: space-between;
+  }
+  @include sp {
+    flex-direction: column;
+    row-gap: vw(47);
+  }
+}
+
+.p-special__inner__flex__item {
+  @include pc {
+    width: px(372);
+  }
+  @include pc-mid {
+    width: px-var(372);
+  }
+  picture {
+    @include pc {
+      margin-bottom: px(22);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(22);
+    }
+    @include sp {
+      margin-bottom: vw(22);
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  p {
+    text-align: center;
+    @include font-pc(14, 14, 10, 700);
+    @include font-sp(14, 14, 10, 700);
+  }
+
+  &.comming {
+    picture {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: 'coming soon';
+        font-family: $base-font;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 5;
+        @include font-pc(14, 14, 10, 700);
+        @include font-sp(13, 13, 10, 700);
+      }
+    }
+  }
+}

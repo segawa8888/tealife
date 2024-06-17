@@ -1,0 +1,19 @@
+.p-dandelion-how-to__inner {
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    @include pc {
+        background-image: url(../../img/products/dandelion/how-to-dandelion.png);
+    }
+    @include sp {
+        background-image: url(../../img/products/dandelion/how-to-dandelion-sp.png);
+    }
+}
+
+.p-dandelion-how-to__tittle {
+    @include pc {
+        border-bottom:px(3) dotted #C78D1F;
+    }
+    @include sp {
+        border-bottom:vw(3) dotted #C78D1F;
+    }
+}

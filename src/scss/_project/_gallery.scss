@@ -1,0 +1,153 @@
+.p-gallery__inner {
+  position: relative;
+  @include pc {
+    height: px(896);
+  }
+  @include pc-mid {
+    height: px-var(896);
+  }
+  @include sp {
+    height: vw(1045.5);
+  }
+  picture {
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+   > div {
+    z-index: 5;
+    position: absolute;
+  }
+}
+
+.p-gallery__img1,
+.p-gallery__img8 {
+  @include pc {
+    width: px(288);
+    height: px(592);
+  }
+  @include pc-mid {
+    width: px-var(288);
+    height: px-var(592);
+  }
+  @include sp {
+    width: vw(157.5);
+    height: vw(335);
+  }
+}
+.p-gallery__img2,
+.p-gallery__img3,
+.p-gallery__img4,
+.p-gallery__img7 {
+  @include pc {
+    width: px(288);
+    height: px(288);
+  }
+  @include pc-mid {
+    width: px-var(288);
+    height: px-var(288);
+  }
+  @include sp {
+    width: vw(157.5);
+    height: vw(157.5);
+  }
+}
+
+.p-gallery__img5,
+.p-gallery__img6 {
+  @include pc {
+    width: px(592);
+    height: px(288);
+  }
+  @include pc-mid {
+    width: px-var(592);
+    height: px-var(288);
+  }
+  @include sp {
+    width: vw(335);
+    height: vw(157.5);
+  }
+}
+
+.p-gallery__img1 {
+  top: 0;
+  left: 0; 
+}
+.p-gallery__img2 {
+  top: 0;
+  @include pc {
+    left: px(303);
+  }
+  @include pc-mid {
+    left: px-var(303);
+  }
+  @include sp {
+    right: 0;
+  }
+}
+.p-gallery__img3 {
+  @include pc {
+    top: 0;
+    right: px(303);
+  }
+  @include pc-mid {
+    right: px-var(303);
+  }
+  @include sp {
+    top: vw(177.5);
+    right: 0;
+  }
+}
+.p-gallery__img4 {
+  @include pc {
+    right: 0;
+    top: 0;
+  }
+  @include sp {
+    left: 0;
+    bottom: vw(177.5);
+  }
+}
+.p-gallery__img5 {
+  @include pc {
+    left: px(303);
+    top: px(303);
+  }
+  @include pc-mid {
+    left: px-var(303);
+    top: px-var(303);
+  }
+  @include sp {
+    bottom: vw(355);
+    left: 0;
+  }
+}
+.p-gallery__img6 {
+  left: 0;
+  @include pc {
+    bottom: 0;
+  }
+  @include sp {
+    top: vw(355);
+  }
+}
+.p-gallery__img7 {
+  bottom: 0;
+  @include pc {
+    right: px(303);
+  }
+  @include pc-mid {
+    right: px-var(303);
+  }
+  @include sp {
+    left: 0;
+  }
+}
+.p-gallery__img8 {
+  bottom: 0;
+  right: 0;
+}

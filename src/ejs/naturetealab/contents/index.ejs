@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<%- include(`${ROOT}naturetealab/_include/_img`) %>
+
+<head>
+  <% var meta={ title: 'スペシャルコンテンツ｜NATURE TEA LAB（ナチュレティーラボ）公式サイト' , description: 'RIKACO（リカコ）とTeaLife（ティーライフ）がコラボしたオーガニックティー「NATURE TEA LAB（ナチュレティーラボ）」のスペシャルコンテンツの一覧ページです。' , keywords: 'keywords' , og : { url: `/naturetealab`, iamge: 'https://www.tealife.co.jp/naturetealab/img/module/concept.jpg' } } -%>
+  <% var path="../" -%> <%- include(`${ROOT}naturetealab/_common/_head`, { meta: meta, path:path }) %>
+
+  <!-- page css files start -->
+  <link rel="stylesheet" type="text/css" href="<%- path %>css/swiper.css" />
+  <link rel="stylesheet" type="text/css" href="<%- path %>assets/css/style.css" />
+  <!-- page css files end -->
+</head>
+
+<body class="sub">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL4N2B4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="header">
+  </div>
+
+  <!-- contents start -->
+  <div id="mainContents" class="special">
+    <section class="p-page p-page__special">
+      <h1 class="p-page__tittle">special<br class="is-sp">contents</h1>
+    </section>
+
+    <section class="p-breadcrumb">
+      <nav class="p-breadcrumb__inner">
+        <ul class="p-breadcrumb__lists">
+          <li class="p-breadcrumb__list"><a href="<%- path %>">TOP</a></li>
+          <li class="p-breadcrumb__list"><a href="<%- path %>/contents/">SPECIAL CONTENTS</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="p-special p-special-contents" id="special">
+      <div class="p-special__bg" style="background-image: none;">
+        <div class="p-special__inner mx-pc-1200 mx-sp-335">
+          <div class="p-special__inner__flex">
+            <a href="<%- path %>/contents/interview01.html" class="p-special__inner__flex__item" data-module="FadeIn">
+              <%- imgTag("top/special-01.png", "コラボスタート　インタビュー", false,path)%>
+              <span class="p-special__category">interview</span>
+              <p class="p-special__text">コラボスタート　インタビュー</p>
+            </a>
+            <a href="<%- path %>/contents/story01.html" class="p-special__inner__flex__item" data-module="FadeIn">
+              <%- imgTag("top/special-02.jpg", "商品試作、試飲会", false,path)%>
+              <span class="p-special__category">story</span>
+              <p class="p-special__text">商品試作、試飲会</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=uESOdL7Cv00%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC" class="p-special__inner__flex__item" data-module="FadeIn" target="_blank">
+              <%- imgTag("top/special-03.jpg", "発売イベント", false,path)%>
+              <span class="p-special__category">story</span>
+              <p class="p-special__text">新商品発表会</p>
+            </a> 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+    </div>
+
+    <!-- page js files end -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="<%- path %>js/swiper.js"></script>
+    <script src="<%- path %>js/lp.js"></script>
+    <script src="<%- path %>js/anime.js"></script>
+</body>
+
+</html>

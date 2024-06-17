@@ -1,0 +1,137 @@
+.c-fukidashi {
+	@include pc {
+		display: flex;
+		// max-width: px(663);
+		margin-left: px(28);
+		margin-right: px(28);
+		margin-bottom: px(50);
+		
+	}
+	@include sp {
+		padding: 0 vw(20);
+		margin-bottom: vw(40);
+	}
+}
+
+.c-fukidashi__left {
+	@include sp {
+		display: inline-block;
+		margin-bottom: vw(25);
+	}
+}
+
+.c-fukidashi__img {
+	border-radius: 200%;
+	overflow: hidden;
+	@include pc {
+		margin-bottom: px(10);
+	}
+	@include sp {
+		margin-bottom: vw(10);
+	}
+	picture {
+		display: block;
+		@include pc {
+			width: px(100);
+			height: px(100);
+		}
+		@include sp {
+			width: vw(60);
+			height: vw(60);
+		}
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			border-radius: 200%;
+		}
+	}
+}
+
+.c-fukidashi__right {
+	flex: 1;
+	@include pc {
+		margin-left: px(28);
+	margin-top: px(10);
+	}
+}
+.c-fukidashi__name {
+	text-align: center;
+	@include font-pc(16, 16, 10, 500);
+	@include font-sp(13, 16, 10, 500);
+}
+.c-fukidashi__text {
+	@include font-pc(14, 28, 10, 600);
+	@include font-sp(14, 28, 10, 600);
+	color: #649C63;
+	background-color: #F5F5F5;
+	padding: px(15) px(20);
+	border-radius: 10px;
+	display: inline-block;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		width: px(20);
+		height: px(20);
+		
+		background-image: linear-gradient(to bottom left,#F5F5F5 50%,#ffffff 51%);
+		@include pc {
+			top: 50%;
+		left: px(-18);
+		transform: translateY(-50%);
+		}
+		@include sp {
+			width: vw(20);
+			left: vw(26);
+			height: vw(20);
+			top: vw(-20);
+			background-image: linear-gradient(to top right,#F5F5F5 50%,#ffffff 51%);
+		}
+	}
+}
+
+.c-fukidashi--02 {
+	@include pc {
+		flex-direction: row-reverse;
+		justify-content:flex-end;
+	}
+	@include sp {
+		text-align: right;
+	}
+
+	.c-fukidashi__left {
+		@include sp {
+			margin-left: auto;
+		}
+	}
+	.c-fukidashi__right {
+		text-align: right;
+		@include pc {
+			margin-right: px(28);
+			margin-left: 0;
+		}
+	}
+	.c-fukidashi__text {
+		text-align: left;
+		color: #FF973E;
+		&::before {
+			content: "";
+			position: absolute;
+			
+			background-image: linear-gradient(to bottom right,#F5F5F5 50%,#ffffff 51%);
+			@include pc {
+				top: 50%;
+				left: inherit;
+				right: px(-18);
+				transform: translateY(-50%);
+			}
+			@include sp {
+				right: vw(26);
+				left: inherit;
+				top: vw(-20);
+				background-image: linear-gradient(to top left,#F5F5F5 50%,#ffffff 51%);
+			}
+		}
+	}
+}

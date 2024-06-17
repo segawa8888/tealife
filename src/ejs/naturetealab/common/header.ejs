@@ -1,0 +1,106 @@
+<%- include(`${ROOT}naturetealab/_include/_img`) %>
+<% var path = "/tealife/" %>
+<header class="l-header--always-on-display">
+  <div class="l-header">
+    <a href="<%- path %>" class="l-header__logo">
+      <div class="l-header__logo2">
+        <%- imgTag("module/logo2.png", "NATURE TEA LAB", false, path)%>
+      </div>
+    </a>
+    <div class="l-header__nav__wrap">
+      <nav class="l-header__nav">
+        <ul class="l-header__nav__list">
+          <li><a href="<%- path %>">TOP</a></li>
+          <li><a href="<%- path %>about">ABOUT</a></li>
+          <li><a href="<%- path %>products">PRODUCTS</a></li>
+          <li><a href="<%- path %>contents/">SPECIAL CONTENTS</a></li>
+          <li><a href="<%- path %>#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="openbtn is-sp">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+<script>
+  // ハンバーガーメニュー
+  class Ios15ModalHack {
+    constructor() {
+      this.init();
+      this.load();
+      this.resize();
+    }
+    init() {
+      const styleTag = document.createElement('style');
+      styleTag.innerText = '@media (max-width: 768px) {html.is-locked,html.is-locked body {height: calc(var(--window-inner-height) + ${window.scrollY}px - 1px);overflow: hidden;box-sizing: border-box;}}';
+      document.getElementsByTagName('head')[0].insertAdjacentElement('beforeend', styleTag);
+    }
+    syncHeight() {
+      document.documentElement.style.setProperty('--window-inner-height', `${window.innerHeight}px`);
+    }
+    load() {
+      window.addEventListener('load', () => {
+        this.syncHeight();
+      });
+    }
+    resize() {
+      // if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+      //   return;
+      // } else {
+      window.addEventListener('resize', () => {
+        this.syncHeight();
+      });
+      // }
+    }
+  }
+  const App = new Ios15ModalHack();
+
+  $('.openbtn').click(function() {
+    $(this).toggleClass('is-active');
+    $('.l-header__nav__wrap').toggleClass('is-panelactive');
+    $('html').toggleClass('is-locked');
+  });
+  $('.l-header__nav a').click(function() {
+    $('.openbtn').removeClass('is-active');
+    $('.l-header__nav__wrap').removeClass('is-panelactive');
+    $('html').removeClass('is-locked');
+  });
+
+  // スクロールしたらクラス付与
+  $(window).scroll(function() {
+    var height = $(window).height();
+    if ($(window).scrollTop() > height) {
+      $('header').addClass('is-scrolled');
+      $('.p-kv__btn').addClass('is-scrolled');
+    } else {
+      $('header').removeClass('is-scrolled');
+      $('.p-kv__btn').removeClass('is-scrolled');
+    }
+  });
+
+  // ヘッダー位置調整
+  $(window).on('load', function() {
+    let headerHeight = $('.l-header').outerHeight();
+    let urlHash = location.hash;
+    if (urlHash) {
+      let position = $(urlHash).offset().top - headerHeight;
+      $('html, body').animate({
+        scrollTop: position
+      }, 0);
+    }
+  });
+  const headerFunc = () => {
+    let headerHeight = $('.l-header').outerHeight();
+    let urlHash = location.hash;
+    if (urlHash) {
+      let position = $(urlHash).offset().top - headerHeight;
+      $('html, body').animate({
+        scrollTop: position
+      }, 0);
+    }
+  };
+  window.addEventListener('hashchange', headerFunc, false);
+</script>

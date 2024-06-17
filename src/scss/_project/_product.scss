@@ -1,0 +1,139 @@
+.p-product__bg {
+  @include pc {
+    background-image: url(../../img/bg/bg-07.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: px(118) 0 px(100);
+  }
+  @include pc-mid {
+    padding: px-var(98) 0 px-var(100);
+  }
+  @include sp {
+    padding: vw(84) 0 vw(78);
+  }
+}
+
+.p-product__inner__text {
+  @include pc {
+    margin-bottom: px(66);
+  }
+  @include pc-mid {
+    margin-bottom: px-var(66);
+  }
+  @include sp {
+    margin-bottom: vw(40);
+  }
+  h3 {
+    text-align: center;
+    @include font-pc(36, 52, 10, 500);
+    @include font-sp(24, 38, 10, 500);
+    @include pc {
+      margin-bottom: px(24);
+      margin-top: px(45);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(24);
+      margin-top: px-var(45);
+    }
+    @include sp {
+      margin-bottom: vw(30);
+      margin-top: vw(32);
+    }
+  }
+  p {
+    @include pc {
+      text-align: center;
+    }
+    @include font-pc(13, 44, 10, 500);
+    @include font-sp(12, 22, 10, 500);
+  }
+}
+
+.p-product__inner__flex {
+  display: flex;
+  @include pc {
+    align-items: center;
+    justify-content: space-between;
+  }
+  @include sp {
+    flex-direction: column-reverse;
+    row-gap: vw(24);
+  }
+  &.mb {
+    @include pc {
+      margin-bottom: px(70);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(70);
+    }
+    @include sp {
+      margin-bottom: vw(35);
+    }
+  }
+  &.reverse {
+    @include pc {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.p-product__inner__flex__img {
+  @include pc {
+    width: px(560);
+  }
+  @include pc-mid {
+    width: px-var(560);
+  }
+}
+
+.p-product__inner__flex__text {
+  @include pc {
+    width: px(560);
+  }
+  @include pc-mid {
+    width: px-var(560);
+  }
+  picture {
+    @include pc {
+      margin-bottom: px(30);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(30);
+    }
+    @include sp {
+      margin-bottom: vw(24);
+    }
+  }
+  img {
+    @include pc {
+      width: px(70);
+      height: px(36.39);
+    }
+    @include pc-mid {
+      width: px-var(70);
+      height: px-var(36.39);
+    }
+    @include sp {
+      width: vw(50);
+      height: vw(26);
+    }
+  }
+  h4 {
+    @include font-pc(36, 46, 100, 500);
+    @include font-sp(22, 32, 100, 500);
+    @include pc {
+      margin-bottom: px(24);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(24);
+    }
+    @include sp {
+      margin-bottom: vw(10);
+    }
+  }
+  p {
+    @include font-pc(18, 29.25, 0, 500);
+    @include font-sp(16, 26, 0, 500);
+  }
+}
+

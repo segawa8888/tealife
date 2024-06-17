@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<%- include(`${ROOT}naturetealab/_include/_img`) %>
+
+<head>
+  <% var meta={ title: 'Active Blend DANDELION（タンポポ茶）｜NATURE TEA LAB（ナチュレティーラボ）公式サイト' , description: 'RIKACO（リカコ）とTeaLife（ティーライフ）がコラボしたオーガニックティー「NATURE TEA LAB（ナチュレティーラボ）」のActive Blend DANDELION（タンポポ茶）ページです。' , keywords: 'keywords' , og : { url: `/naturetealab`, iamge: 'https://www.tealife.co.jp/naturetealab/img/module/concept.jpg' } } -%>
+  <% var path="../../" -%> <%- include(`${ROOT}naturetealab/_common/_head`, { meta: meta, path:path }) %>
+
+  <!-- page css files start -->
+  <link rel="stylesheet" type="text/css" href="<%- path %>/css/swiper.css" />
+  <link rel="stylesheet" type="text/css" href="<%- path %>assets/css/style.css" />
+  <!-- page css files end -->
+</head>
+
+<body class="sub">
+
+  <div class="header">
+  </div>
+
+  <!-- contents start -->
+  <div id="mainContents" class="detail">
+    <section class="p-page p-page__products">
+      <p class="p-page__tittle">products</p>
+    </section>
+
+    <section class="p-breadcrumb">
+      <nav class="p-breadcrumb__inner">
+        <ul class="p-breadcrumb__lists">
+          <li class="p-breadcrumb__list"><a href="<%- path %>">TOP</a></li>
+          <li class="p-breadcrumb__list"><a href="<%- path %>products/">PRODUCTS</a></li>
+          <li class="p-breadcrumb__list"><a href="<%- path %>products/dandeliontea/">Organic Active Blend DANDELION</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="p-detail">
+      <div class="p-detail__inner mx-pc-1200">
+        <div class="p-detail__contents">
+
+          <!-- swiper -->
+          <div class="p-detail__swiper-content">
+            <div class="swiper-container p-detail-slider">
+              <div class="swiper-wrapper p-detail__wrapper">
+                <div class="swiper-slide p-detail__slide">
+                  <%- imgTag("products/products-03.jpg", "DANDELION", false,path)%>
+                </div>
+                <div class="swiper-slide p-detail__slide">
+                  <%- imgTag("products/dandelion/dandelion-02-main.jpg", "yo", false,path)%>
+                </div>
+                <div class="swiper-slide p-detail__slide">
+                  <%- imgTag("products/dandelion/dandelion-03-main.jpg", "bi", false,path)%>
+                </div>
+                <div class="swiper-slide p-detail__slide">
+                  <%- imgTag("products/dandelion/dandelion-04-main.jpg", "dsc", false,path)%>
+                </div>
+              </div>
+            </div>
+
+            <!-- thumbnail -->
+            <div class="swiper-container p-detail-thumbnail">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide p-detail__slide">
+                  <%- imgTag("products/products-03.jpg", "DANDELION", false,path)%>
+                </div>
+                <div class="swiper-slide p-detail__slide">
+                  <%- imgTag("products/dandelion/dandelion-02.jpg", "yo", false,path)%>
+                </div>
+                <div class="swiper-slide p-detail__slide">
+                  <%- imgTag("products/dandelion/dandelion-03.jpg", "bi", false,path)%>
+                </div>
+                <div class="swiper-slide p-detail__slide">
+                  <%- imgTag("products/dandelion/dandelion-04.jpg", "dsc", false,path)%>
+                </div>
+              </div>
+            </div>
+          </div><!-- content -->
+
+          <div class="p-detail__select-content">
+            <div class="p-detail__wrap">
+              <div class="p-detail__tittle-icon">
+                <%- imgTag("module/yo.png", "yo", false,path)%>
+              </div>
+              <div class="p-detail__tittle-wrap">
+                <h1>
+                  <span class="p-detail__tittle u-yellow u-min">Active Blend DANDELION</span><br>
+                  <span class="p-detail__disc u-min">アクティブ ブレンド ダンデリオン</span>
+                </h1>
+                <ul class="p-detail__icons">
+                  <li class="p-detail__icon"><%- imgTag("top/jas.png", "jas", false,path)%></li>
+                  <li class="p-detail__icon"><%- imgTag("module/filter.png", "filter", false,path)%></li>
+                  <li class="p-detail__icon"><%- imgTag("module/non-caffein.png", "non caffein", false,path)%></li>
+                </ul>
+              </div>
+            </div>
+            <form action="" class="p-detail__form">
+              <ul class="p-detail__plans">
+                <li class="p-detail__plan">
+                  <input type="radio" id="plan01" name="selector"><label for="plan01" class="u-min">
+                    今回のみお届け
+                    <span class="p-detail__plan__price">通常価格：<span>3,500円</span>（税込）</span>
+                    <span>申込番号：11922</span>
+                  </label>
+                </li>
+                <li class="p-detail__plan">
+                  <input type="radio" id="plan02" name="selector"><label for="plan02" class="u-min">
+                    お得な定期お届け
+                    <span class="p-detail__plan__price">10%引き：<span>3,150円</span>（税込）</span>
+                    <span class="p-detail__plan__caution">※ 定期お届けでございますので、ご連絡をいただくまでは自動的にお届けいたします。<br>
+                      ※ 定期お届けはお届け回数にかかわらず、商品の変更・お休み・キャンセルを承っております。<br>
+                      ※ 商品の変更・お休み・キャンセルの場合は、お届け予定日の10日前までにご連絡をお願いいたします。<br>
+                      ＜申込番号：11922＞定期お届け2回目以降は、申込番号11922「Active Blend DANDELION」通常価格3,500円（税込）の10％引きの3,150円（税込）となります。</span>
+                  </label>
+                </li>
+                <li>
+                  <label for="select" class="u-min">数量</label>
+                  <select name="select" id="select" class="p-detail__select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </li>
+                <li style="padding-left:0;">
+                  <button type="submit" class="u-min p-detail__btn btn-more">買い物カゴに入れる</button>
+                </li>
+                <li>
+                  <div class="p-free">
+                    <p class="p-free-box p-detail__btn">
+                      4/30（必着）まで送料無料
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div><!-- contents -->
+      </div><!-- inner -->
+    </section>
+    <section class="p-detail-herb">
+      <div class="p-detail-herb__wrapper mx-pc-1200">
+        <h4 class="p-detail-herb__catch u-min u-yellow">たんぽぽ根×ハーブ<br><span>ホットのお茶がカラダを巡り温める</span></h4>
+        <div class="p-detail-herb__inner">
+          <div class="p-detail-herb__wrap">
+            <p class="p-detail-herb__text">「アクティブで活発な女性を応援する」をコンセプトに、ノンカフェインで定番の「たんぽぽ根」をベースに、セルフケアによく用いられるエルダーフラワーなどをブレンドしたオーガニックハーブティー。</p>
+            <p class="p-detail-herb__text">ホットで飲めばお茶が体をめぐりしっかりと温めます。運動の前後はアイスで飲むのもおすすめです。ノンカフェインなので、時間場所問わず飲めるのも嬉しいポイントです。</p>
+            <p class="p-detail-herb__recommend u-yellow">こんな方におすすめ</p>
+            <ul class="p-detail-herb__checks">
+              <li class="p-detail-herb__check">
+                <span class="p-detail-herb__check-icon"> <%- imgTag("module/yellow-check.png", "check", false,path)%></span>
+                <p class="u-min p-detail-herb__check-text">アクティブに過ごしたい</p>
+              </li>
+              <li class="p-detail-herb__check">
+                <span class="p-detail-herb__check-icon"> <%- imgTag("module/yellow-check.png", "check", false,path)%></span>
+                <p class="u-min p-detail-herb__check-text">寒さが気になる</p>
+              </li>
+              <li class="p-detail-herb__check">
+                <span class="p-detail-herb__check-icon"> <%- imgTag("module/yellow-check.png", "check", false,path)%></span>
+                <p class="u-min p-detail-herb__check-text">ホットなお茶で芯から温めたい</p>
+              </li>
+            </ul>
+          </div>
+          <div class="p-detail-herb__img">
+            <%- imgTag("products/dandelion/dandelion-graf.png", "graf", false,path)%>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="p-detail-shine">
+      <div class="p-detail-shine__inner u-yellow-back mx-pc-1200">
+        <h4 class="p-detail__section-tittle u-min u-yellow">おすすめシーン</h4>
+        <div class="p-detail-shine__content">
+          <div class="p-detail-shine__wrap">
+            <div class="p-detail-shine__img">
+              <%- imgTag("products/dandelion/shine01.jpg", "shine01", false,path)%>
+            </div>
+            <p class="u-min p-detail-shine__text">運動時はアイスで</p>
+          </div>
+          <div class="p-detail-shine__wrap">
+            <div class="p-detail-shine__img">
+              <%- imgTag("products/dandelion/shine02.jpg", "shine02", false,path)%>
+            </div>
+            <p class="u-min p-detail-shine__text">嬉しいノンカフェイン、就寝前の1杯に</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-detail-blend mx-pc-1200">
+      <h4 class="p-detail__section-tittle u-min u-yellow">ブレンド内容</h4>
+      <div class="p-detail-blend__inner">
+        <div class="p-detail-blend__content">
+          <ul class="p-detail-blend__items">
+            <li class="p-detail-blend__item">
+              <div class="p-detail-blend__img">
+                <%- imgTag("products/dandelion/dandelion-blend-01.png", "ダンデリオンルート", false,path)%>
+              </div>
+              <div class="p-detail-blend__wrap">
+                <p class="p-detail-blend__tittle u-min">ダンデリオンルート</p>
+                <p class="p-detail-blend__text">たんぽぽ根を香ばしく焙煎したノンカフェインのコーヒー風味飲料。コーヒーが飲みたいけどカフェインが気になる方に親しまれているハーブティーです。</p>
+              </div>
+            </li>
+            <li class="p-detail-blend__item">
+              <div class="p-detail-blend__img">
+                <%- imgTag("products/dandelion/dandelion-blend-02.png", "エルダーフラワー", false,path)%>
+              </div>
+              <div class="p-detail-blend__wrap">
+                <p class="p-detail-blend__tittle u-min">エルダーフラワー</p>
+                <p class="p-detail-blend__text">花言葉は「おもいやり」で世界中で利用されているハーブ。はちみつ、マスカットのような香りともいわれ、ダンデリオンルートとの相性も良いです。</p>
+              </div>
+            </li>
+            <li class="p-detail-blend__item">
+              <div class="p-detail-blend__img">
+                <%- imgTag("products/dandelion/dandelion-blend-03.png", "ストロベリーリーフ", false,path)%>
+              </div>
+              <div class="p-detail-blend__wrap">
+                <p class="p-detail-blend__tittle u-min">ストロベリーリーフ</p>
+                <p class="p-detail-blend__text">ヨーロッパやアメリカで広くにわたり、くつろぎ時間のお供に飲用されているハーブです。</p>
+              </div>
+            </li>
+            <li class="p-detail-blend__item">
+              <div class="p-detail-blend__img">
+                <%- imgTag("products/dandelion/dandelion-blend-04.png", "ジュニパーベリー", false,path)%>
+              </div>
+              <div class="p-detail-blend__wrap">
+                <p class="p-detail-blend__tittle u-min">ジュニパーベリー</p>
+                <p class="p-detail-blend__text">ペパーミントよりもさらに古くから利用されているハーブ。アクセントに加えました。</p>
+              </div>
+            </li>
+            <li class="p-detail-blend__item">
+              <div class="p-detail-blend__img">
+                <%- imgTag("products/dandelion/dandelion-blend-05.png", "ハイビスカス", false,path)%>
+              </div>
+              <div class="p-detail-blend__wrap">
+                <p class="p-detail-blend__tittle u-min">ハイビスカス</p>
+                <p class="p-detail-blend__text">鮮やかなルビー色と酸味が特徴のハーブです。</p>
+              </div>
+            </li>
+            <li class="p-detail-blend__item">
+              <div class="p-detail-blend__img">
+                <%- imgTag("products/dandelion/dandelion-blend-06.png", "ローズヒップ", false,path)%>
+              </div>
+              <div class="p-detail-blend__wrap">
+                <p class="p-detail-blend__tittle u-min">ローズヒップ</p>
+                <p class="p-detail-blend__text">バラの果実で女性に人気のハーブ。美容にも嬉しいハーブとしても有名です。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-detail-disc mx-pc-1200">
+      <h4 class="p-detail__section-tittle u-min u-yellow">自分らしく力強く生きる。<br>
+        そして自然に感謝する。</h4>
+      <div class="p-detail-disc__inner">
+        <div class="p-detail-disc__content">
+          <div class="p-detail-disc__text">
+            <p>「たんぽぽ」は西洋では「ダンデリオン」と呼ばれ、日本でも古くから「生薬」として使用されてきました。身近にある植物でありながら、あまりにも身近な植物ゆえにその大切さやすごさを見失いがちですが、マクロビオティックでは外せないお茶です。<br>当たり前にある幸せを感じ、身近なものに意識を向け、自然に感謝しながら生きることを大切にしたいRIKACOさんの考え方を表現したハーブティーで、たんぽぽのようにたくましくアクティブに生きてほしいという想いと自然や環境に少しでも目を向けてほしいという想いを形にしました。</p>
+          </div>
+          <div class="p-detail-disc__img">
+            <%- imgTag("products/dandelion/dandelion-disc.jpg", "disc", false,path)%>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-detail-how-to">
+      <div class="p-detail-how-to__inner p-dandelion-how-to__inner mx-pc-1200">
+        <h4 class="p-detail-how-to__tittle p-dandelion-how-to__tittle u-min u-yellow">おいしいお召し上がり方</h4>
+        <ul class="p-detail-how-to__items">
+          <li class="p-detail-how-to__item">
+            <div class="p-detail-how-to__img">
+              <%- imgTag("products/dandelion/how-to-icon01.jpg", "おいしいお召し上がり方", false,path)%>
+            </div>
+            <span class="p-detail-how-to__number u-yellow-back2 u-min">1</span>
+            <p class="p-detail-how-to__text">カップにお湯を入れ温めておきます。</p>
+          </li>
+          <li class="p-detail-how-to__item">
+            <div class="p-detail-how-to__img">
+              <%- imgTag("products/dandelion/how-to-icon02.jpg", "おいしいお召し上がり方", false,path)%>
+            </div>
+            <span class="p-detail-how-to__number u-yellow-back2 u-min">2</span>
+            <p class="p-detail-how-to__text">温めたカップにティーバッグ1個を入れ、<br>沸騰したお湯（150ml～200ml）を注ぎます。</p>
+          </li>
+          <li class="p-detail-how-to__item">
+            <div class="p-detail-how-to__img">
+              <span class="p-detail-how-to__img__fukidashi u-yellow">5分</span>
+              <%- imgTag("products/dandelion/how-to-icon03.jpg", "おいしいお召し上がり方", false,path)%>
+            </div>
+            <span class="p-detail-how-to__number u-yellow-back2 u-min">3</span>
+            <p class="p-detail-how-to__text">蓋をして5分程蒸らしたら、ティーバッグを<br>取り出しお召し上がりください。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="p-detail-spec">
+      <div class="p-detail-spec__container mx-pc-1200">
+        <div class="p-detail-spec__inner">
+          <div class="p-detail-spec__content">
+            <p class="p-detail-spec__tittle u-min u-yellow">SPEC</p>
+            <div>
+              <div style="display: flex;">
+                <p class="p-detail-spec__text p-detail-spec__text1">内容量<br>原材料（原産国）<br><br><br class="is-sp"><br class="is-sp"><br class="is-sp">消費期限<br>製造加工地</p>
+                <p class="p-detail-spec__text p-detail-spec__text2">2ｇ×20個入（150～200ml用）<br>有機ダンデリオンルート（ポーランド共和国）、有機エルダーフラワー、有機ストロベリーリーフ、有機ジョニパーベリー、有機ハイビスカス：有機ローズヒップ<br>18ヵ月<br>日本</p>
+              </div>
+              <p class="p-detail-spec__text p-detail-spec__text3">※妊娠中、授乳中の方は医師へのご相談をおすすめしております。</p>
+            </div>
+          </div>
+
+          <div class="p-detail-spec__btn">
+            <button type="submit" class="u-min p-detail__btn btn-more">買い物カゴに入れる</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-detail-line">
+      <div class="p-detail-line__container mx-pc-1200">
+        <div class="p-detail-line__inner">
+          <h4 class="p-detail__line-tittle u-min u-yellow">ラインナップ</h4>
+          <div class="p-detail-line__content">
+            <ul class="p-detail-line__items">
+              <li class="p-detail-line__item">
+                <a href="<%- path %>products/greentea/">
+                  <div class="p-detail-line__image">
+                    <%- imgTag("products/products-01.jpg", "GREEN TEA", false,path)%>
+                  </div>
+                  <div class="p-detail-line__wrap">
+                    <h4 class="p-detail-line__tittle u-green u-min">Refresh Blend GREEN TEA</h4>
+                  </div>
+                </a>
+              </li>
+              <li class="p-detail-line__item">
+                <a href="<%- path %>products/rooibostea/">
+                  <div class="p-detail-line__image">
+                    <%- imgTag("products/products-02.jpg", "ROOIBOS", false,path)%>
+                  </div>
+                  <div class="p-detail-line__wrap">
+                    <h4 class="p-detail-line__tittle u-red u-min">Beauty Blend ROOIBOS</h4>
+                  </div>
+                </a>
+              </li>
+              <li class="p-detail-line__item">
+                <a href="<%- path %>products/dandeliontea/">
+                  <div class="p-detail-line__image">
+                    <%- imgTag("products/products-03.jpg", "DANDELION", false,path)%>
+                  </div>
+                  <div class="p-detail-line__wrap">
+                    <h4 class="p-detail-line__tittle u-yellow u-min">Active Blend DANDELION</h4>
+                  </div>
+                </a>
+              </li>
+              <li class="p-detail-line__item">
+                <a href="<%- path %>products/tea-set/">
+                  <div class="p-detail-line__image">
+                    <%- imgTag("products/products-04.jpg", "NATURE TEA LAB", false,path)%>
+                  </div>
+                  <div class="p-detail-line__wrap">
+                    <h4 class="p-detail-line__tittle u-min">NATURE TEA LAB<br>3種セット</h4>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- contents end -->
+  <div class="footer">
+  </div>
+
+  <!-- page js files end -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="<%- path %>js/lp.js"></script>
+  <script src="<%- path %>js/anime.js"></script>
+  <script src="<%- path %>js/swiper.js"></script>
+  <script src="<%- path %>js/script.js"></script>
+</body>
+
+</html>

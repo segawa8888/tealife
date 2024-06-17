@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<%- include(`${ROOT}naturetealab/_include/_img`) %>
+
+<head>
+  <% var meta={ title: '商品一覧｜NATURE TEA LAB（ナチュレティーラボ）公式サイト' , description: 'RIKACO（リカコ）とTeaLife（ティーライフ）がコラボしたオーガニックティー「NATURE TEA LAB（ナチュレティーラボ）」の商品一覧ページです。' , keywords: 'keywords' , og : { url: `/naturetealab`, iamge: 'https://www.tealife.co.jp/naturetealab/img/module/concept.jpg' } } -%>
+  <% var path="../" -%> <%- include(`${ROOT}naturetealab/_common/_head`, { meta: meta, path:path }) %>
+
+  <!-- page css files start -->
+  <link rel="stylesheet" type="text/css" href="<%- path %>css/swiper.css" />
+  <link rel="stylesheet" type="text/css" href="<%- path %>assets/css/style.css" />
+  <!-- page css files end -->
+</head>
+
+<body class="sub">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL4N2B4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="header">
+  </div>
+
+  <!-- contents start -->
+  <div id="mainContents" class="products">
+    <section class="p-page p-page__products">
+      <h1 class="p-page__tittle">products</h1>
+    </section>
+
+    <section class="p-breadcrumb">
+      <nav class="p-breadcrumb__inner">
+        <ul class="p-breadcrumb__lists">
+          <li class="p-breadcrumb__list"><a href="<%- path %>#">TOP</a></li>
+          <li class="p-breadcrumb__list"><a href="<%- path %>products/">PRODUCTS</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="p-products top__products">
+      <div class="p-products__inner mx-pc-1560">
+        <div class="p-products__contents">
+          <div class="p-products__content">
+            <ul class="p-products__items">
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <%- imgTag("products/products-01.jpg", "GREEN TEA", false,path)%>
+                </div>
+                <div class="p-products__wrap">
+                  <h2 class="p-products__tittle u-green u-min">Refresh Blend GREEN TEA</h2>
+                  <a href="<%- path %>products/greentea/" class="btn-more p-products__btn">view more</a>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <%- imgTag("products/products-02.jpg", "ROOIBOS", false,path)%>
+                </div>
+                <div class="p-products__wrap">
+                  <h2 class="p-products__tittle u-red u-min">Beauty Blend ROOIBOS</h2>
+                  <a href="<%- path %>products/rooibostea/" class="btn-more p-products__btn">view more</a>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <%- imgTag("products/products-03.jpg", "DANDELION", false,path)%>
+                </div>
+                <div class="p-products__wrap">
+                  <h2 class="p-products__tittle u-yellow u-min">Active Blend DANDELION</h2>
+                  <a href="<%- path %>products/dandeliontea/" class="btn-more p-products__btn">view more</a>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <%- imgTag("products/products-04.jpg", "NATURE TEA LAB", false,path)%>
+                </div>
+                <div class="p-products__wrap">
+                  <h2 class="p-products__tittle u-min">NATURE TEA LAB<br>3種セット</h2>
+                  <a href="<%- path %>products/tea-set/" class="btn-more p-products__btn">view more</a>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- contents end -->
+  <div class="footer">
+  </div>
+
+  <!-- page js files end -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="<%- path %>js/swiper.js"></script>
+  <script src="<%- path %>js/lp.js"></script>
+  <script src="<%- path %>js/anime.js"></script>
+</body>
+
+</html>

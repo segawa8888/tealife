@@ -1,0 +1,246 @@
+@import "_resource/_init";
+
+/*------------------------------
+
+  開発環境の初期化
+
+------------------------------*/
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: $base-font;
+	color: #000;
+	overflow-x: hidden;
+	@include sp {
+		margin-bottom: vw(46);
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+	@include pc {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+
+img,
+video {
+	max-width: 100%;
+	width: 100%;
+}
+
+picture {
+	display: flex;
+}
+
+.u-min {
+	font-family: $base-font2;
+}
+
+.u-orange {
+	color: #ff973e;
+}
+.u-pink {
+	color: #fc5b72;
+}
+.u-green {
+	color: #7eb25f;
+}
+.u-red {
+	color: #d60d05;
+}
+.u-yellow {
+	color: #c78d1f;
+}
+
+.u-green-back {
+	background-color: #f6f9f4;
+}
+
+.u-green-back2 {
+	background-color: #7eb25f;
+}
+
+.u-red-back {
+	background-color: #fbf2f2;
+}
+
+.u-red-back2 {
+	background-color: #d60d05;
+}
+
+.u-yellow-back {
+	background-color: #f8f3e9;
+}
+
+.u-yellow-back2 {
+	background-color: #c78d1f;
+}
+
+.u-ttl {
+	text-align: center;
+	font-family: $base-font2;
+	color: $green;
+	@include font-pc(24, 24, 300, 500);
+	@include font-sp(20, 20, 300, 500);
+}
+
+.mx-pc-1560 {
+	@include pc {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: px(1200);
+	}
+	@include pc-mid {
+		max-width: px-var(1200);
+	}
+}
+
+.mx-pc-1200 {
+	@include pc {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: px(1200);
+	}
+	@include pc-mid {
+		max-width: px-var(1200);
+	}
+}
+
+.mx-sp-330 {
+	@include sp {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: vw(335);
+	}
+}
+
+.mx-sp-335 {
+	@include sp {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: vw(335);
+	}
+}
+
+// anime
+[data-module="FadeIn"] {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+[data-module="FadeIn"].is-FadeIn {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@import "_layout/_header";
+@import "_project/_kv";
+@import "_project/_text";
+@import "_project/_gallery";
+@import "_project/_concept";
+@import "_project/_philosophy";
+@import "_project/_organic";
+@import "_project/_sensibility";
+@import "_project/_info";
+@import "_project/_product";
+@import "_project/_special";
+@import "_project/_contact";
+@import "_project/_about";
+@import "_project/_btn";
+@import "_project/_page";
+@import "_project/_about/_page";
+@import "_project/_about/_breadcrumb";
+@import "_project/_about/navigation";
+@import "_project/_interview/index";
+@import "_project/_story/index";
+@import "_project/_products/products";
+@import "_project/_products/detail";
+@import "_project/_products/green-tea";
+@import "_project/_products/rooibos";
+@import "_project/_products/dandelion";
+@import "_project/_products/3-set";
+@import "_project/_special/special";
+@import "_layout/_footer";
+@import "_component/_fukidashi";
+
+.is-pc {
+	@include sp {
+		display: none;
+	}
+}
+
+.is-sp {
+	@include pc {
+		display: none;
+	}
+}
+@include pc {
+	.mb-80 {
+		margin-bottom: px(80) !important;
+	}
+	.mb-30 {
+		margin-bottom: px(30) !important;
+	}
+	.pt-80 {
+		padding-top: px(80) !important;
+	}
+	.pt-50 {
+		padding-top: px(50) !important;
+	}
+}
+
+@include sp {
+	.mb-sp-20 {
+		margin-bottom: vw(20) !important;
+	}
+	.pt-sp-50 {
+		padding-top: vw(50) !important;
+	}
+}
+
+.is-bold {
+	font-weight: bold !important;
+}
+
+/***** Movie追加関連 *****/
+#Movie {
+	margin-bottom: 84px;
+}
+#Movie .movie_wrap {
+	position: relative;
+	width: 100%;
+	height: 0;
+	margin: 0 auto;
+	padding-top: 56.25%;
+}
+#Movie .movie_wrap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width: 766px) {
+	#Movie {
+		margin-bottom: 56px;
+	}
+}
+
+.u-hover {
+	transition: all 0.2s;
+	@include pc {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

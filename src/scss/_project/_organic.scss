@@ -1,0 +1,126 @@
+.p-organic {
+  @include pc {
+    margin-top: px(-56);
+  }
+  @include pc-mid {
+    margin-top: px-var(-56);
+  }
+  @include sp {
+    margin-top: vw(34);
+  }
+}
+
+.p-organic__bg {
+  background-repeat: no-repeat;
+  background-position: top center;
+  @include pc {
+    background-image: url(../../img/bg/bg-02.png);
+    background-size: 100% px(1478);
+    padding-top: px(258);
+  }
+  @include pc-mid {
+    background-size: 100% px-var(1478);
+    padding-top: px-var(258);
+  }
+  @include sp {
+    background-image: url(../../img/bg/bg-02sp.png);
+    background-size: 100% vw(1118);
+    padding-top: vw(105);
+  }
+}
+
+.p-organic__inner {
+  .u-ttl {
+    @include pc {
+      margin-bottom: px(47);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(47);
+    }
+    @include sp {
+      margin-bottom: vw(38);
+    }
+  }
+}
+
+.p-organic__inner__jas {
+  @include pc {
+    margin-bottom: px(38);
+  }
+  @include pc-mid {
+    margin-bottom: px-var(38);
+  }
+  @include sp {
+    margin-bottom: vw(20);
+  }
+  picture {
+    justify-content: center;
+  }
+  img {
+    @include pc {
+      width: px(100);
+      height: px(52);
+    }
+    @include pc-mid {
+      width: px-var(100);
+      height: px-var(52);
+    }
+    @include sp {
+      width: vw(80);
+      height: vw(41.6);
+    }
+  }
+}
+
+.p-organic__inner__text {
+  @include pc {
+    text-align: center;
+    padding-bottom: px(50)
+  }
+  @include pc-mid {
+    padding-bottom: px-var(50)
+  }
+  @include sp {
+    padding-bottom: vw(20)
+  }
+  p {
+    @include font-pc(14, 44, 10, 700);
+    @include font-sp(13, 34, 10, 700);
+    @include pc {
+      margin-bottom: px(35);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(35);
+    }
+    @include sp {
+      margin-bottom: vw(18);
+    }
+  }
+}
+
+.p-organic__inner__img {
+  @include pc {
+    max-width: px(1560);
+    margin-inline:auto;
+  }
+  @include pc-mid {
+    max-width: px-var(1560);
+    margin-inline:auto;
+  }
+}
+
+@include sp {
+  .p-organic__inner__img {
+    width:vw(335);
+    height: vw(250);
+    margin-inline:auto;
+    picture {
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

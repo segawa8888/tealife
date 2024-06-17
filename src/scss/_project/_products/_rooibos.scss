@@ -1,0 +1,19 @@
+.p-rooibos-how-to__inner {
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    @include pc {
+        background-image: url(../../img/products/rooibos/how-to-rooibos.png);
+    }
+    @include sp {
+        background-image: url(../../img/products/rooibos/how-to-rooibos-sp.png);
+    }
+}
+
+.p-rooibos-how-to__tittle {
+    @include pc {
+        border-bottom:px(3) dotted #D60D05;
+    }
+    @include sp {
+        border-bottom:vw(3) dotted #D60D05;
+    }
+}

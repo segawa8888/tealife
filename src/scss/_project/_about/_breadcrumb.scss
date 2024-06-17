@@ -1,0 +1,34 @@
+.p-breadcrumb__lists {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.p-breadcrumb__inner {
+    @include pc {
+        padding-right: px(15);
+        padding-left: px(15);
+        margin-top: px(30);
+    }
+    @include sp {
+        padding-right: vw(15);
+        padding-left: vw(15);
+        margin-top: vw(20);
+    }
+}
+
+.p-breadcrumb__list {
+    @include font-pc(12, 12, 10, 500);
+    @include font-sp(12, 12, 10, 500);
+}
+
+.p-breadcrumb__list:not(:last-of-type)::after {
+    content: ">";
+    color: #000; 
+    @include pc {
+        margin:0 px(3);
+    }
+    @include sp {
+        margin:0 vw(5);
+    }
+  }

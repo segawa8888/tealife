@@ -1,0 +1,53 @@
+.btn-more {
+	@include font-pc(14, 14, 10, 700);
+	@include font-sp(14, 14, 10, 700);
+	color: #4b4b4b;
+	font-family: $base-font2;
+	display: block;
+	margin-right: auto;
+	text-align: center;
+	position: relative;
+	text-transform: uppercase;
+	@include pc {
+		width: px(172);
+		min-width: px(120);
+		margin-right: auto;
+		border: px(1) solid $btn;
+		padding: px(10) px(37);
+		margin-top: px(18);
+	}
+	@include sp {
+		margin-top: vw(14);
+		width: vw(172);
+		min-width: vw(120);
+		border: vw(1) solid $btn;
+		padding: vw(10) vw(37);
+	}
+	&:hover {
+		@include pc {
+			cursor: pointer;
+			opacity: 0.7;
+		}
+	}
+}
+
+.btn-more::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) rotate(45deg);
+	@include pc {
+		right: px(11);
+		width: px(10);
+		height: px(10);
+		border-right: px(1) solid $btn;
+		border-top: px(1) solid $btn;
+	}
+	@include sp {
+		right: vw(11);
+		width: vw(10);
+		height: vw(10);
+		border-right: vw(1) solid $btn;
+		border-top: vw(1) solid $btn;
+	}
+}

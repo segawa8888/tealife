@@ -1,0 +1,149 @@
+.p-sensibility__bg {
+  @include pc {
+    background-image: url(../../img/bg/bg-06.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    padding: px(120) 0 px(120);
+  }
+  @include pc-mid {
+    padding: px-var(120) 0 px-var(120);
+  }
+  @include sp {
+    padding: vw(83) 0 vw(110);
+  }
+}
+
+.p-sensibility__inner__ttl {
+  .u-ttl {
+    @include pc {
+      margin-bottom: px(68);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(68);
+    }
+    @include sp {
+      margin-bottom: vw(38);
+    }
+  }
+}
+
+.p-sensibility__inner__ttl__x {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include pc {
+    column-gap: px(5.5);
+    margin-bottom: px(70);
+    margin-right: px(18);
+  }
+  @include pc-mid {
+    column-gap: px-var(5.5);
+    margin-bottom: px-var(70);
+    margin-right: px-var(18);
+  }
+  @include sp {
+    white-space: nowrap;
+    column-gap: vw(12);
+    margin-bottom: vw(55);
+    margin-right: vw(13);
+  }
+  span {
+    @include font-pc(24, 24, 200, 500);
+    @include font-sp(20, 20, 200, 500);
+  }
+  img {
+    @include pc {
+      width: px(70);
+      height: px(70);
+    }
+    @include pc-mid {
+      width: px-var(70);
+      height: px-var(70);
+    }
+    @include sp {
+      width: vw(60);
+      height: vw(60);
+    }
+  }
+}
+
+.p-sensibility__inner__flex {
+  display: flex;
+  @include pc {
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include sp {
+    flex-direction: column-reverse;
+  }
+  &.mb {
+    @include pc {
+      margin-bottom: px(70);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(70);
+    }
+    @include sp {
+      margin-bottom: vw(45);
+    }
+  }
+  &.reverse {
+    @include pc {
+      flex-direction: row-reverse;
+    }
+  }
+}
+.p-sensibility__inner__flex__text {
+  @include pc {
+    width: px(560);
+    margin-top: px(20);
+  }
+  @include pc-mid {
+    width: px-var(560);
+    margin-top: px-var(20);
+  }
+  @include sp {
+    margin-bottom: vw(38);
+  }
+  h3 {
+    @include font-pc(28, 34, 10, 500);
+    @include font-sp(24, 34, 10, 500);
+    @include pc {
+      margin-bottom: px(30)
+    }
+    @include pc-mid {
+      margin-bottom: px-var(30)
+    }
+    @include sp {
+      margin-bottom: vw(16);
+    }
+  }
+  p {
+    @include font-pc(14, 48, 0, 500);
+    @include font-sp(13, 34, 0, 500);
+  }
+}
+.p-sensibility__inner__flex__img {
+  @include pc {
+    width: px(560);
+    height: px(560);
+  }
+  @include pc-mid {
+    width: px-var(560);
+    height: px-var(560);
+  }
+  @include sp {
+    width: 100%;
+    height: vw(335);
+  }
+  picture {
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

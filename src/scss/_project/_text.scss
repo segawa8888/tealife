@@ -1,0 +1,39 @@
+.p-text {
+  @include pc {
+    padding: px(70) 0 px(90);
+  }
+  @include pc-mid {
+    padding: px-var(70) 0 px-var(90);
+  }
+  @include sp {
+    padding: vw(40) 0 vw(55);
+  }
+}
+.p-text__inner {
+  text-align: center;
+  h1 {
+    @include font-pc(28, 28, 10, 500);
+    @include font-sp(16, 24, 10, 500);
+    @include pc {
+      margin-bottom: px(50);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(50);
+    }
+    @include sp {
+      margin-bottom: vw(20);
+    }
+  }
+  .small {
+    @include font-pc(24, 48, 10, 500);
+    @include font-sp(20, 40, 10, 500);
+  }
+  .large {
+    color: #92A774;
+    @include font-pc(37, 52, 10, 500);
+    @include font-sp(30, 42, 10, 500);
+    span {
+      color: #516F2A;
+    }
+  }
+}

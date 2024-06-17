@@ -1,0 +1,13 @@
+.p-page__about {
+    @include pc {
+        background-image: url(../../img/about/about-top.jpg);
+        height:px(350);
+        background-size: cover;
+    }
+    @include sp {
+        background-image: url(../../img/about/about-top-sp.jpg);
+        height:vw(280);
+        background-size: contain;
+        background-position: center center;
+    }
+}

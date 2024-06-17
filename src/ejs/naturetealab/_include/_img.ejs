@@ -1,0 +1,24 @@
+<%
+imgTag = function(src, alt="", sp=false, path=""){
+	if(sp) {
+		return `<picture>
+  <source
+    media="(max-width: 767px)"
+    srcset="${path}img/sp/${src}"
+  >
+  <img
+    src="${path}img/${src}"
+    alt="RIKACO（リカコ）さんとTeaLife（ティーライフ）がコラボしたオーガニックティー「NATURE TEA LAB（ナチュレティーラボ）」の${alt}"
+  >
+</picture>`;
+	} else {
+		return `<picture>
+  <img
+    src="${path}img/${src}"
+    alt="RIKACO（リカコ）さんとTeaLife（ティーライフ）がコラボしたオーガニックティー「NATURE TEA LAB（ナチュレティーラボ）」の${alt}"
+  >
+</picture>`;
+	}
+
+}
+%>

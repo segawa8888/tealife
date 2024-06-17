@@ -1,0 +1,137 @@
+.p-about__inner {
+  @include pc {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: px(1200);
+    margin-top: px(125);
+    padding-left: px(20);
+    padding-right: px(20);
+  }
+  @include sp {
+    padding-right: vw(20);
+    padding-left: vw(20);
+  }
+}
+
+.p-about__bg {
+    background-repeat: no-repeat;
+    background-position:top center;
+    @include pc {
+      background-image: url(../../img/top/bg-03.png);
+      background-size: 100% 100%;
+      padding-top: px(180);
+      padding-bottom: px(350); 
+    }
+    @include pc-mid {
+      background-image: url(../../img/top/bg-03.png);
+      background-size: 100% 100%;
+      padding-top: px-var(180);
+      padding-bottom: px-var(350);
+    }
+    @include sp {
+      background-image: url(../../img/top/bg-03-sp.png);
+      padding-top: vw(130);
+      padding-bottom: vw(118);
+      background-repeat: round;
+      background-size:contain;
+    }
+}
+
+.p-about__item {
+  @include pc {
+    margin-top: px(60);
+    display: flex;
+    align-items:center;
+    gap:0 px(40);
+  }
+    @include sp {
+        margin-top: vw(40);
+    }
+}
+
+.p-about__item:nth-child(2n) {
+  .p-about__border {
+    @include pc {
+      margin-left:0;
+      margin-right: px(-40);
+    }
+  }
+}
+
+.p-about__item:nth-child(n+2) {
+  @include pc {
+    margin-top: px(80);
+  }
+  @include sp {
+    margin-top: vw(50);
+  }
+}
+
+.p-about__img {
+  @include pc {
+    width: px(700);
+  }
+}
+
+.p-about__shadow {
+  @include pc {
+    box-shadow: 0px 0px px(20) 0px rgba(0, 0, 0, 0.08);
+  }
+  @include sp {
+    box-shadow: 0px 0px vw(20) 0px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.p-about__img__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-about__wrap {
+  @include pc {
+    width:px(500);
+  }
+  @include sp {
+    margin-left: vw(18);
+    padding-left: vw(18.5);
+    border-left:vw(1) solid $btn;
+  }
+}
+
+.p-about__tittle {
+  color:#000;
+  font-family: $base-font2;
+  @include font-pc(20, 20, 300, 500);
+  @include font-sp(16, 16, 300, 500);
+  @include pc {
+    max-width: px(460);
+  }
+  @include sp {
+    padding-top: vw(24.5);
+  }
+}
+
+.p-about__border {
+  @include pc {
+    height:px(1);
+    background-color: $btn;
+    display: block;
+    margin-left: px(-40);
+    margin-top: px(10);
+    }
+}
+
+.p-about__text {
+  color:#000;
+  font-family: $base-font;
+  @include font-pc(14, 26, 10, 500);
+  @include font-sp(14, 26, 10, 500);
+  @include pc {
+    margin-top: px(17);
+    min-height:px(96);
+  }
+  @include sp {
+    margin-top: vw(12);
+  }
+}

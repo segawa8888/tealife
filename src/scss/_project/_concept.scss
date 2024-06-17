@@ -1,0 +1,84 @@
+.p-concept {
+  @include pc {
+    margin-top: px(100);
+  }
+  @include sp {
+    margin-top: vw(60);
+  }
+}
+
+.p-concept__bg {
+  background-repeat: no-repeat;
+  background-position: top center;
+  @include pc {
+    background-image: url(../../img/about/bg-concept.png);
+    background-size: 100% px(1122);
+    padding-top: px(100);
+  }
+  @include pc-mid {
+    background-size: 100% px-var(1122);
+    padding-top: px-var(80);
+  }
+  @include sp {
+    background-image: url(../../img/about/bg-concept-sp.png);
+    background-size: 100% vw(582);
+    padding-top: vw(50);
+  }
+}
+
+.p-concept__text {
+  text-align: center;
+  @include pc {
+    margin-bottom: px(85);  
+  }
+  @include pc-mid {
+    margin-bottom: px-var(85);
+  }
+  @include sp {
+    margin-bottom: vw(40);
+  }
+  .u-ttl {
+    @include pc {
+      margin-bottom: px(35);
+    }
+    @include pc-mid {
+      margin-bottom: px-var(35);
+    }
+    @include sp {
+      margin-bottom: vw(30);
+    }
+  }
+  p {
+    @include font-pc(14, 44, 10, 700);
+    @include font-sp(13, 34, 10, 700);
+    @include sp {
+    }
+  }
+}
+
+.p-concept__img {
+  @include pc {
+    max-width: px(1560);
+    margin-inline:auto;
+  }
+  @include pc-mid {
+    max-width: px-var(1560);
+    margin-inline:auto;
+  }
+}
+
+@include sp {
+.p-concept__img {
+    width:vw(335);
+    height: vw(250);
+    margin-inline:auto;
+    picture {
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+    }
+  }
+}

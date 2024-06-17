@@ -1,0 +1,151 @@
+.p-philosophy__bg {
+	@include pc {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		padding-top: px(120);
+		background-image: url(../../img/bg/bg-05.png);
+	}
+	@include pc-mid {
+		padding-top: px-var(120);
+	}
+	@include sp {
+		padding-top: vw(115);
+	}
+}
+
+.p-philosophy__inner {
+	.u-ttl {
+		@include pc {
+			margin-bottom: px(60);
+		}
+		@include pc-mid {
+			margin-bottom: px-var(60);
+		}
+		@include sp {
+			margin-bottom: vw(30);
+		}
+	}
+}
+
+.p-philosophy__inner__flex {
+	display: flex;
+	@include pc {
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: px(120);
+	}
+	@include pc-mid {
+		margin-bottom: px-var(120);
+	}
+	@include sp {
+		flex-direction: column-reverse;
+		margin-bottom: vw(82);
+	}
+}
+.p-philosophy__inner__flex__img {
+	@include pc {
+		width: px(560);
+	}
+	@include pc-mid {
+		width: px-var(560);
+	}
+}
+.p-philosophy__inner__flex__text {
+	@include pc {
+		width: px(560);
+		margin-top: px(18);
+	}
+	@include pc-mid {
+		width: px-var(560);
+		margin-top: px-var(18);
+	}
+	@include sp {
+		margin-bottom: vw(25);
+	}
+	p {
+		@include font-pc(14, 48, 0, 500);
+		@include font-sp(13, 34, 0, 500);
+	}
+}
+
+.p-brand__inner {
+	.u-ttl {
+		@include pc {
+			margin-bottom: px(58);
+		}
+		@include pc-mid {
+			margin-bottom: px-var(58);
+		}
+		@include sp {
+			margin-bottom: vw(35);
+		}
+	}
+}
+.p-brand__inner__flex {
+	display: flex;
+	@include pc {
+		justify-content: space-between;
+		align-items: center;
+	}
+	@include sp {
+		flex-direction: column;
+	}
+}
+.p-brand__inner__flex__text {
+	@include pc {
+		width: px(560);
+		margin-top: px(15);
+	}
+	@include pc-mid {
+		width: px-var(560);
+		margin-top: px-var(15);
+	}
+	@include sp {
+		margin-bottom: vw(40);
+	}
+	h3 {
+		@include font-pc(16, 24, 10, 700);
+		@include font-sp(16, 24, 10, 700);
+		@include pc {
+			margin-bottom: px(30);
+		}
+		@include pc-mid {
+			margin-bottom: px-var(30);
+		}
+		@include sp {
+			margin-bottom: vw(18);
+		}
+	}
+	p {
+		@include font-pc(14, 48, 0, 500);
+		@include font-sp(13, 34, 0, 500);
+	}
+}
+.p-brand__inner__flex__img {
+	background-color: #ffffff;
+	box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.08);
+	@include pc {
+		width: px(420);
+		height: px(420);
+	}
+	@include pc-mid {
+		width: px-var(420);
+		height: px-var(420);
+	}
+	@include sp {
+		width: 100%;
+		height: vw(335);
+	}
+	picture {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	img {
+		width: 80%;
+		height: 100%;
+		object-fit: contain;
+	}
+}

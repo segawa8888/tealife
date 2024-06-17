@@ -1,0 +1,249 @@
+.p-kv__btn {
+  position: fixed;
+  right: 0;
+  background-color: #06C755;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: all .3s;
+  @include pc {
+    bottom: px(70);
+    width: px(200);
+    height: px(60);
+    border-radius: px(6.76) 0 0 px(6.76);
+  }
+  @include pc-mid {
+    bottom: px-var(70);
+    min-width: px-var(200);
+    height: px-var(60);
+    border-radius: px-var(6.76) 0 0 px-var(6.76);
+  }
+  @include sp {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: vw(46);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    @include pc {
+      column-gap: px(10);
+    }
+    @include pc-mid {
+      column-gap: px-var(10);
+    }
+    @include sp {
+      column-gap: vw(13);
+    }
+  }
+  img {
+    @include pc {
+      width: px(40);
+      height: px(38.12);
+    }
+    @include pc-mid {
+      width: px-var(40);
+      height: px-var(38.12);
+    }
+    @include sp {
+      width: vw(29.94);
+      height: vw(28.52);
+    }
+
+  }
+  span {
+    color: #fff;
+    @include font-pc(15, 18, 10, 700);
+    @include font-sp(15, 18, 10, 700);
+  }
+
+  &.is-scrolled {
+    opacity: 1;
+    z-index: 998;
+  }
+}
+
+.p-kv {
+  position: relative;
+  height: 100vh;
+
+  .is-pc,
+  .is-sp {
+    height: 100vh;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.p-kv__play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: vw(30);
+  width: vw(195);
+  height: vw(41);
+  border-radius: vw(30);
+  border: 1px solid #fff;
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  cursor: pointer;
+  z-index: 99;
+  span {
+    @include font-sp(16, 16, 10, 700);
+  }
+
+  picture {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: vw(9);
+  }
+  img {
+    width: vw(26);
+    height: vw(26);
+  }
+}
+
+// modal
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 100000;
+}
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+.modal__content{
+  background: #fff;
+  left: 0;
+  right: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+}
+a.js-modal-close {
+  color: $green;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: vw(-10);
+  transform: translateY(-100%);
+  right: vw(12);
+  width: vw(25);
+  height: vw(25);
+  border-radius: 50%;
+  background-color: #fff;
+  @include font-sp(18, 18, 0, 700);
+}
+
+// mutebtn
+.p-kv__volume,
+.p-kv__volumeSp {
+  position: absolute;
+  cursor: pointer;
+  @include pc {
+    bottom: px(30);
+    right: px(30);
+    width: px(21);
+    height: px(20);
+  }
+  @include sp {
+    bottom: vw(20);
+    right: vw(15);
+    width: vw(21);
+    height: vw(20);
+  }
+  span {
+    display: inline-block;
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 1px;
+    bottom: 0;
+    height: 50%;
+    animation-direction:alternate;
+
+    &:first-of-type {
+      left: 0;
+    }
+    &:nth-of-type(2) {
+      right: 50%;
+      transform: translateX(-50%);
+    }
+    &:last-of-type {
+      right: 0;
+    }
+  }
+
+  &.is-active {
+    span {
+      animation: 2s ease-in 1s infinite alternate forwards running volumn;
+      &:nth-of-type(2) {
+        animation-delay:0.4s;
+      }
+      &:last-of-type {
+        animation-delay:0.7s;
+      }
+    }
+  }
+}
+@keyframes volumn{
+  0% {
+    height:20%;
+  }
+  100% {
+    height:100%;
+  }
+}
+
+// spslider
+.p-kv__swiper {
+  height: 100vh;
+  
+  .swiper-slide {
+    transition: all 2s !important;
+    backface-visibility: hidden;
+    height: 100vh;
+
+    picture {
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  opacity: 0;
+  animation-name: fadeInAnime1;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnime1{
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
